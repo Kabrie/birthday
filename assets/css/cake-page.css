@@ -1,0 +1,30 @@
+div {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b2b3eeca79a80926667ec71b01eac12&auto=format&fit=crop&w=1050&q=80) no-repeat center center/cover;
+}
+
+span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(calc(-50% - 12px), calc(-50% + 12px), 0);
+  mix-blend-mode: screen;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-shadow: 0px 0px white,  0px 0px white,  0px 0px white,             0px 0px white,  0px 0px white, 0px 0px white, 0px 0px white, 0px 0px white, 0px 0px white, 0px 0px white, 0px 0px white;
+  opacity: 0;
+  animation: revolve 2s cubic-bezier(0.47, 0.01, 0, 1.01) forwards 0.5s;
+}
+@keyframes revolve {
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0);
+    text-shadow: -2px 1px white,  -3px 2px white,  -4px 3px white,             -5px 4px white,  -6px 5px white, -7px 6px white, -8px 7px white, -9px 8px white, -10px 9px white, -11px 10px white, -12px 11px white;
+  }
+}
